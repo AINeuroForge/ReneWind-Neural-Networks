@@ -1,86 +1,92 @@
-# ReneWind — Neural Network–Based Failure Prediction
+# ReneWind — Predictive Maintenance Neural Network Pipeline
 
 ## Executive Summary
-Wind energy operations depend on high equipment availability, where unexpected turbine generator failures lead to costly downtime and reactive maintenance. This project applies neural network–based classification models to predict wind turbine generator failures using sensor data, enabling proactive maintenance planning and improved operational reliability.
+Wind energy operations rely on high equipment availability, where unexpected turbine generator failures lead to costly downtime, reactive maintenance, and lost production. This project implements a neural network–based predictive maintenance pipeline to identify wind turbine generator failures from sensor data, enabling earlier intervention and improved operational reliability.
 
-The work emphasizes minimizing false negatives to ensure failures are identified early, supporting cost-efficient maintenance strategies in wind energy production.
+Beyond introducing neural networks, this work represents a transition from isolated model experimentation to **end-to-end pipeline design**, with explicit emphasis on decision support, false-negative minimization, and real maintenance impact.
 
 ---
 
 ## Business Objective
-Develop a predictive classification system that:
-- Identifies potential turbine generator failures before breakdown
-- Minimizes false negatives to reduce unplanned downtime
-- Supports proactive maintenance and cost reduction strategies
+Develop a predictive maintenance classification pipeline that:
+- Detects potential turbine generator failures before breakdown
+- Prioritizes minimizing false negatives to reduce unplanned downtime
+- Supports proactive maintenance scheduling and cost reduction
 
-The objective is to improve **reliability and maintenance decision-making**, not simply to maximize model accuracy.
+The objective is to improve **reliability and maintenance decision-making**, not to optimize accuracy in isolation.
 
 ---
 
 ## Data Overview
 - Sensor-based operational data from wind turbine generators
-- Mixed numeric features representing equipment performance signals
+- Numeric features representing equipment performance and operating conditions
 - Binary classification target indicating failure vs. normal operation
-- Class imbalance reflecting the rarity of failure events
+- Strong class imbalance reflecting the rarity of failure events in production systems
 
 ---
 
 ## Analytical / Technical Approach
 
 ### 1. Data Preparation
-- Data cleaning and preprocessing of sensor signals
-- Handling of missing values and normalization of inputs
-- Feature preparation suitable for neural network architectures
+- Data ingestion, validation, and preprocessing of sensor signals
+- Handling of missing values and normalization of continuous inputs
+- Feature preparation tailored for neural network architectures
 
-### 2. Modeling Strategy
-- Baseline classification models for comparison
-- Feedforward neural network implementation
-- Selection and tuning of activation functions
-- Iterative model refinement to balance sensitivity and stability
+### 2. Pipeline & Modeling Strategy
+- Establishment of baseline classification models for comparison
+- Design and implementation of a feedforward neural network
+- Experimentation with activation functions and network configuration
+- Iterative refinement to balance sensitivity, stability, and generalization
+
+This project marks the first instance where modeling decisions are treated as **pipeline components**, not standalone experiments.
 
 ### 3. Evaluation Methodology
-- Performance evaluation focused on:
+- Evaluation focused on operational relevance, including:
   - Recall and false-negative reduction
-  - Confusion matrix analysis
-  - Overall classification reliability
-- Model selection based on operational impact rather than accuracy alone
+  - Confusion matrix–driven failure analysis
+  - Overall classification reliability under imbalance
+- Model selection guided by maintenance impact rather than accuracy alone
 
 ---
 
 ## Key Findings
-- Neural network models effectively capture nonlinear relationships in sensor data.
-- Minimizing false negatives significantly improves maintenance readiness.
-- Proper activation function selection materially impacts classification performance.
-- Neural networks provide meaningful gains over simpler models when tuned correctly.
+- Neural networks effectively capture nonlinear relationships in turbine sensor data.
+- Prioritizing recall materially improves maintenance readiness and failure detection.
+- Activation function choice has a significant effect on model sensitivity.
+- Properly tuned neural networks provide meaningful gains over simpler classifiers in this domain.
 
 ---
 
 ## Limitations
-- Model performance depends on sensor data quality and coverage.
-- Rare failure events limit the volume of positive-class examples.
-- The system is designed for **decision support**, not autonomous maintenance actions.
+- Model performance depends heavily on sensor data quality and coverage.
+- Rare failure events constrain the number of positive-class examples.
+- The pipeline is designed for **decision support**, not autonomous maintenance execution.
 
 ---
 
 ## Next Steps
 - Incorporation of temporal and sequential modeling approaches
 - Cost-sensitive optimization aligned with maintenance economics
-- Integration into predictive maintenance workflows
-- Ongoing retraining as new operational data becomes available
+- Integration into predictive maintenance and monitoring workflows
+- Continuous retraining as new operational data becomes available
 
 ---
 
 ## Repository Structure
-- `notebooks/` — Data exploration, neural network modeling, and evaluation
-- `README.md` — Project overview, methodology, and findings
+- `notebooks/` — End-to-end predictive maintenance pipeline implementation, including preprocessing, neural network modeling, and evaluation
+- `README.md` — Project overview, methodology, findings, and pipeline framing
+
 ---
 
 ## View Modeling
-[![Open In GitHub](https://img.shields.io/badge/Open%20in-GitHub-black?logo=github)](https://github.com/CGM-AIML/Exploratory-Data-Analysis/blob/main/Exploratory_Data_Analysis_Notebook_Christopher_Gonzalez_Mejias.ipynb)
+[![Open In GitHub](https://img.shields.io/badge/Open%20in-GitHub-black?logo=github)](
+https://github.com/AIneuroForge/ReneWind-Neural-Networks/blob/main/notebooks/01_predictive_maintenance_pipeline_neural_networks.ipynb
+)
+
 ---
 
 ## Project Context
 This project was completed as part of the **Introduction to Neural Networks** course in the  
-**UT Austin / Great Learning Post Graduate Program in AI & ML (2025–2026)** and has been refactored for **portfolio-grade presentation**.
+**UT Austin / Great Learning Post Graduate Program in AI & ML (2025–2026)** and has been **refactored to reflect the transition from academic modeling to professional pipeline development**.
 
-[View FoodHub Project in ePortfolio](https://www.mygreatlearning.com/eportfolio/christopher-gonzalez-mejias)  
+🔗 [View Personal Loan Project in ePortfolio](https://www.mygreatlearning.com/eportfolio/christopher-gonzalez-mejias)
