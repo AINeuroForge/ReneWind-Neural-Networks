@@ -79,7 +79,7 @@ This project marks the first instance where modeling decisions are treated as **
 ---
 
 ## View Modeling
-[![Open In GitHub](https://img.shields.io/badge/Open%20in-GitHub-black?logo=github)](https://github.com/AIneuroForge/ReneWind-Neural-Networks/blob/main/notebooks/INN_ReneWind_Main_Project_Chris_Gonzalez_Mejias.ipynb)
+[![Open In GitHub](https://img.shields.io/badge/Open%20in-GitHub-black?logo=github)](https://github.com/AIneuroForge/ReneWind-Neural-Networks/main/notebooks/INN_ReneWind_Main_Project_Chris_Gonzalez_Mejias.ipynb)
 
 ---
 
